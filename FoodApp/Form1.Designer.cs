@@ -39,6 +39,8 @@
             dataGridView1 = new DataGridView();
             button2 = new Button();
             button3 = new Button();
+            textBox3 = new TextBox();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -55,7 +57,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(43, 185);
+            label2.Location = new Point(43, 301);
             label2.Name = "label2";
             label2.Size = new Size(174, 41);
             label2.TabIndex = 2;
@@ -63,14 +65,14 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(53, 254);
+            textBox1.Location = new Point(43, 358);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(413, 47);
             textBox1.TabIndex = 3;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(53, 393);
+            textBox2.Location = new Point(43, 489);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(416, 47);
             textBox2.TabIndex = 5;
@@ -78,7 +80,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(43, 324);
+            label3.Location = new Point(43, 435);
             label3.Name = "label3";
             label3.Size = new Size(123, 41);
             label3.TabIndex = 4;
@@ -87,7 +89,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(43, 478);
+            label4.Location = new Point(37, 556);
             label4.Name = "label4";
             label4.Size = new Size(180, 41);
             label4.TabIndex = 6;
@@ -95,29 +97,30 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Location = new Point(53, 546);
+            richTextBox1.Location = new Point(43, 620);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(416, 159);
+            richTextBox1.Size = new Size(426, 85);
             richTextBox1.TabIndex = 7;
             richTextBox1.Text = "";
             // 
             // button1
             // 
-            button1.Location = new Point(529, 381);
+            button1.Location = new Point(507, 382);
             button1.Name = "button1";
             button1.Size = new Size(186, 94);
             button1.TabIndex = 8;
             button1.Text = "Order now";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(747, 290);
+            dataGridView1.Location = new Point(743, 290);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(443, 415);
+            dataGridView1.Size = new Size(447, 415);
             dataGridView1.TabIndex = 9;
             // 
             // button2
@@ -128,6 +131,7 @@
             button2.TabIndex = 10;
             button2.Text = "Show";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -139,12 +143,30 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(43, 221);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(413, 47);
+            textBox3.TabIndex = 13;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(43, 158);
+            label5.Name = "label5";
+            label5.Size = new Size(60, 41);
+            label5.TabIndex = 12;
+            label5.Text = "No";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(18F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 64, 0);
             ClientSize = new Size(1225, 759);
+            Controls.Add(textBox3);
+            Controls.Add(label5);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(dataGridView1);
@@ -160,6 +182,7 @@
             Margin = new Padding(7, 6, 7, 6);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -178,5 +201,7 @@
         private DataGridView dataGridView1;
         private Button button2;
         private Button button3;
+        private TextBox textBox3;
+        private Label label5;
     }
 }
